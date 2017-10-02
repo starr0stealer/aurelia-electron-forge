@@ -1,0 +1,79 @@
+{
+    "name": "aurelia-electron-forge",
+    "productName": "aurelia-electron-forge",
+    "version": "1.0.0",
+    "description": "My Electron application description",
+    "private": true,
+    "main": "src/index.js",
+    "scripts": {
+        "start": "electron-forge start",
+        "package": "electron-forge package",
+        "make": "electron-forge make",
+        "publish": "electron-forge publish"
+    },
+    "config": {
+        "forge": {
+            "make_targets": {
+                "win32": [
+                    "squirrel"
+                ],
+                "darwin": [
+                    "zip"
+                ],
+                "linux": [
+                    "deb",
+                    "rpm"
+                ]
+            },
+            "electronPackagerConfig": {
+                "packageManager": "npm"
+            },
+            "electronWinstallerConfig": {
+                "name": "aurelia_electron_forge"
+            },
+            "electronInstallerDebian": {},
+            "electronInstallerRedhat": {},
+            "github_repository": {
+                "owner": "",
+                "name": ""
+            },
+            "windowsStoreConfig": {
+                "packageName": "",
+                "name": "aureliaelectronforge"
+            }
+        }
+    },
+    "dependencies": {
+        "aurelia-animator-css": "^1.0.2",
+        "aurelia-binding": "^1.3.0",
+        "aurelia-bootstrapper": "^2.1.1",
+        "aurelia-event-aggregator": "^1.0.1",
+        "aurelia-fetch-client": "^1.1.3",
+        "aurelia-framework": "^1.1.4",
+        "aurelia-history": "^1.0.0",
+        "aurelia-history-browser": "^1.1.0",
+        "aurelia-loader-nodejs": "^1.0.1",
+        "aurelia-logging": "^1.3.1",
+        "aurelia-logging-console": "^1.0.0",
+        "aurelia-route-recognizer": "^1.1.1",
+        "aurelia-router": "^1.3.0",
+        "aurelia-templating": "^1.4.2",
+        "aurelia-templating-binding": "^1.3.0",
+        "aurelia-templating-resources": "^1.4.0",
+        "aurelia-templating-router": "^1.1.0",
+        "bootstrap": "^3.3.7",
+        "electron-compile": "^6.4.2",
+        "electron-squirrel-startup": "^1.0.0",
+        "font-awesome": "^4.7.0",
+        "jquery": "^3.2.1"
+    },
+    "devDependencies": {
+        "aurelia-testing": "^1.0.0-beta.3.0.1",
+        "babel-plugin-transform-async-to-generator": "^6.24.1",
+        "babel-plugin-transform-class-properties": "^6.24.1",
+        "babel-plugin-transform-decorators-legacy": "^1.3.4",
+        "babel-preset-env": "^1.6.0",
+        "electron-forge": "^4.1.2",
+        "electron-prebuilt-compile": "1.7.8"
+    }
+}
