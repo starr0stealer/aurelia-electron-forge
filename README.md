@@ -13,3 +13,29 @@ Project is based on Electron Forge Vanilla ES6/7 template and Aurelia Skeleton N
  	* Any missing plugins needed for a typical Aurelia project
  * Review **package.json**
  	* Any missing/incorrect *aurelia-** packages
+
+
+#### Typescript
+Adding typescript is pretty easy and rename any `.js` file into a `.ts` file and it should just work!
+just add the typescript mime type to the `.compilerc`
+```json
+{
+  "env": {
+    "development": {
+      "text/typescript": {
+        "inlineSourceMap": true,
+        "module": "commonjs",
+        "target": "es6",
+        "experimentalDecorators": true,
+        "allowSyntheticDefaultImports": true,
+        "emitDecoratorMetadata": true
+      }
+    },
+    "production": {
+      "text/typescript": {
+        "inlineSourceMap": false
+      }
+    }
+  }
+}
+```
